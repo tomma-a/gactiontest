@@ -22,7 +22,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo "Hello, world!" && sudo mkdir -p /opt/root/bin
+        run: echo "::add-mask::Hello, world!" && sudo mkdir -p /opt/root/bin
       - run: echo "::debug::Set the Octocat variable"
       - run: echo "::error file=app.js,line=1::Missing semicolon"
       - run: echo /opt/root/bin >>$GITHUB_PATH
